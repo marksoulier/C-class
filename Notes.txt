@@ -1,3 +1,21 @@
 ECE 1410
 
-hello
+#include <iostream>
+
+cout << "statment"
+
+compile 
+g++ file.cpp -o file.exe 
+./file.exe
+
+#include <fstream>
+
+ofstream myfile;
+myfile.open ("Example.txt", ios::out | ios::app);
+if (myfile.is_open()) {
+    myfile << "Writing this to a file";
+}
+myfile.close();
+
+#include <string>
+when using string variables
