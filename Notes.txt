@@ -19,3 +19,27 @@ myfile.close();
 
 #include <string>
 when using string variables
+
+used for checking errors
+try{
+
+
+
+}
+
+throw{
+
+}
+
+
+classes
+private, public, protected
+private is default
+class ClassName{
+    private:
+        class variables
+    public:
+        public class variables
+        place prototypes
+} variable of class rectangle;
+
