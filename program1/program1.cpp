@@ -56,7 +56,7 @@ int main(int argc, char *argv[]){
             if ((is_complex == 1)){
                 file_out << a << "\t" << b << "\t" << c << "\t" << "complex" << endl;
             }else if(is_zero == 1){
-                file_out << a << "\t" << b << "\t" << c << "\t" << "DNE" << endl;
+                file_out << a << "\t" << b << "\t" << c << "\t" << "Undefined" << endl;
             }
             else{
                 file_out << a << "\t" << b << "\t" << c << "\t";
@@ -66,7 +66,7 @@ int main(int argc, char *argv[]){
             if (is_complex == 1){
                 cout << a << "\t" << b << "\t" << c << "\t" << "complex" << endl;
             }else if(is_zero == 1){
-                cout << a << "\t" << b << "\t" << c << "\t" << "DNE" << endl;
+                cout << a << "\t" << b << "\t" << c << "\t" << "Undefined" << endl;
             }
             else{
                 cout << a << "\t" << b << "\t" << c << "\t";
@@ -79,6 +79,8 @@ int main(int argc, char *argv[]){
         file_in >> b;
         file_in >> c;
     }
+    file_in.close();
+    file_out.close();
     return 0;
 }
 
