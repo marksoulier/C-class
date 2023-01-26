@@ -6,12 +6,17 @@
 *******************************************************************/
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
+
 int main(void){
-    int number;
+    int number = 3;
     std::cout << "Hello World" << std::endl; //print "Hello world"
-    std::cin >> number;
+    std::cin >> number; 
     std::cout << number;
     return 0;
 }

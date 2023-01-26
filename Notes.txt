@@ -24,10 +24,10 @@ used for checking errors
 try{
 
 
-
+    throw exception
 }
 
-throw{
+catch (exception) {
 
 }
 
@@ -43,3 +43,12 @@ class ClassName{
         place prototypes
 } variable of class rectangle;
 
+
+class Triangle { 
+    private:
+
+    public:
+        
+};
+
+int Triangle::area()
