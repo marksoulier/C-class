@@ -8,6 +8,7 @@
 
 class Sudoku {
     private:
+        char solved_array[9][9];
         char array[9][9];
         int already_inhabited(int num, int row, int column);
         int row_violations(int num, int row, int column);

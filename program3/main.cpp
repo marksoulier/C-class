@@ -1,9 +1,8 @@
 /*******************************************************************
  * @name main
- * @brief This function has the user add / subtract / multiply / divide
- *  fractions and returns its simplified answer
- * @param takes in fractions in the form of a numerator and denominator and a opperation
- * @retval returns a fraction in the most simplified form
+ * @brief This function produces a random sudoku board and attempts to solve it if possible
+ * @param takes in number of initial entries from the user
+ * @retval returns a solved suduku board if solved or a statment if unsolved
 *******************************************************************/
 
 #include <iostream>
@@ -26,9 +25,12 @@ int main()
  cout << "Welcome to SudokuSolver!!" << endl; 
  cout << "Enter number of squares to prepopulate: "; 
  cin >> n; 
-  
+
+//create sudoku board
+
  Sudoku s(n); 
-  
+
+//attempt to solve board
 if (s.solve()) { 
   cout << "Solved!" << endl; 
   s.printGrid();
