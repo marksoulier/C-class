@@ -1,6 +1,7 @@
 /*******************************************************************
 *Summary:
-    This class produces and solves Sudoku games
+    This class makes a node containing the country name and score 
+    and a pointer to the next node
 *******************************************************************/
 
 #ifndef SKATER_H
@@ -17,13 +18,13 @@ class Skater {
     private: 
         string country; 
         float score; 
-        Skater *next; 
+        Skater* next; 
 
     public: 
         Skater(string c, float s); 
         string getCountry(); 
         float getScore(); 
-        Skater *getNext(); 
+        Skater *getNext();
         void setNext(Skater *p); 
 };
 

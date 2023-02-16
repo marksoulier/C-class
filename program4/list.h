@@ -1,6 +1,6 @@
 /*******************************************************************
 *Summary:
-    This class produces and solves Sudoku games
+    This class makes a linked list of Skater nodes.
 *******************************************************************/
 
 #ifndef LIST_H
@@ -16,7 +16,7 @@ using namespace std;
 
 class List { 
     private: 
-        Skater *head; 
+        Skater *head;
 
     public: 
         List(); 
