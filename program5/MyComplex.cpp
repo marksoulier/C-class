@@ -28,10 +28,15 @@ MyComplex::MyComplex() {
  * @retval a printed statment to the terminal of the complex number
 *******************************************************************/
 void MyComplex::printMyComplex(){
-        cout << std::fixed << std::setprecision(1);
+
+//set precesion to 1
+    cout << std::fixed << std::setprecision(1);
+
+//print + is imaginary is greater than 0
     if(imaginary > 0){
         cout << real << " + " << imaginary << "i" << endl;
     }else{
+//print - is imaginary is less than 0
         imaginary = -imaginary;
         cout << real << " - " << imaginary << "i" << endl;
     }
@@ -75,6 +80,7 @@ MyComplex MyComplex::operator - (const MyComplex& param) {
 *******************************************************************/
 MyComplex MyComplex::operator * (const MyComplex& param) {
     MyComplex new_complex;
+//cross multiply the two numbers and add for i squared
     new_complex.real = ((real * param.real) - (imaginary * param.imaginary));
     new_complex.imaginary = (real * param.imaginary) + (imaginary * param.real);
     return new_complex;
@@ -89,6 +95,7 @@ MyComplex MyComplex::operator * (const MyComplex& param) {
 *******************************************************************/
 MyComplex MyComplex::operator / (const MyComplex& param) {
     MyComplex new_complex;
+//divide the two numbers and add for i squared
     new_complex.real = (real * param.real + imaginary * param.imaginary) /
     (pow(param.real,2) + pow(param.imaginary,2)) ;
     new_complex.imaginary = ((imaginary * param.real) - (real * param.imaginary)) /
