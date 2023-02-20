@@ -8,7 +8,7 @@ compile
 g++ file.cpp -o file.exe 
 ./file.exe
 
-#include <fstream>
+#include <fstream> 
 
 ofstream myfile;
 myfile.open ("Example.txt", ios::out | ios::app);
