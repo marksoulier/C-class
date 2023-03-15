@@ -1,14 +1,14 @@
-launch.exe: Point.o Circle.o Cylinder.o main.o
-	g++ -o launch.exe Point.o Circle.o Cylinder.o main.o
+launch.exe: point.o circle.o cylinder.o main.o
+	g++ -o launch.exe point.o circle.o cylinder.o main.o
 
-Point.o: Point.cpp Point.h
-	g++ -c Point.cpp
+point.o: point.cpp point.h
+	g++ -c point.cpp
 
-Circle.o: Circle.cpp Circle.h
-	g++ -c Circle.cpp
+circle.o: circle.cpp circle.h
+	g++ -c circle.cpp
 
-Cylinder.o: Cylinder.cpp Cylinder.h
-	g++ -c Cylinder.cpp
+cylinder.o: cylinder.cpp cylinder.h
+	g++ -c cylinder.cpp
 
-main.o: main.cpp Cylinder.h Circle.h Point.h
+main.o: main.cpp cylinder.h circle.h point.h
 	g++ -c main.cpp

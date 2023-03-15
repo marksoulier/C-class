@@ -1,35 +1,23 @@
 /*******************************************************************
  * @name main
- * @brief This function creates a linked list of scores in the olympic skating competition
+ * @brief This function creat
  * @param takes in the country and score from the user
  * @retval returns the scores in decending order if asked
 *******************************************************************/
-#include "MyComplex.h" 
+#include <iostream>
+#include "point.h"
+#include "circle.h"
+#include "cylinder.h"
+using namespace std;
 
-int main() 
-{ 
-  MyComplex a(-3.0, 2.5); 
-  MyComplex b(1.2, 4.4); 
-  MyComplex c;
-
-  // a.printMyComplex();
-  // b.printMyComplex(); 
-
-  c = a + b;
-
-  c.printMyComplex();
-
-  c = a - b;
-
-  c.printMyComplex();
-
-  c = a * b;
-
-  c.printMyComplex();
-
-  c = a / b;
-
-  c.printMyComplex();
-
- return 0; 
-} 
+int main()
+{
+  Point p(4,4); // x coordinate, y coordinate
+  Circle c(5,5,5); // x, y, radius
+  Cylinder y (6, 6, 6, 6); // x, y, r, height
+  cout << p << endl << endl;
+  cout << c << " " << endl << (Point) c << endl << endl;
+  cout << y << " " << endl << (Circle) y << " " << endl << (Point) y
+        << endl << endl;
+  return 0;
+}
