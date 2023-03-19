@@ -20,7 +20,7 @@ class Circle : public Point {
 
     public: 
         Circle(float radius, float x_cord, float y_cord);
-        friend ostream& operator<<(ostream& os, const Circle& p);
+        friend ostream& operator<<(ostream &output, const Circle &c);
 };
 
 #endif
