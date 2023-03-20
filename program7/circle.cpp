@@ -1,4 +1,5 @@
 #include "circle.h"
+#include "point.h"
 
 
 /*******************************************************************
@@ -7,10 +8,9 @@
  * @param x and y corrdinates of the point and its radius
  * @retval returns nothing
 *******************************************************************/
-Circle::Circle(float radius, float x_cord, float, y_cord) {
+Circle::Circle(float x_cord, float y_cord, float radius) : Point(x_cord, y_cord) 
+{
     r = radius;
-    x = x_cord;
-    y = y_cord;
 }
 
 /*******************************************************************
@@ -19,7 +19,7 @@ Circle::Circle(float radius, float x_cord, float, y_cord) {
  * @param the stream it is sent to and the class
  * @retval the stream os
 *******************************************************************/
-ostream& Circle::operator<<(ossteam& os, const Circle& c) {
-    os << "Circle with center = (" << c.x << "," << c.y << ")" << "); Radius = " << c.r << "; Area = "  << 2 * math.py * c.r << endl;
-    return os
+ostream &operator<<(ostream &output, const Circle &c) {
+    output << "Circle with center = (" << c.x << ", " << c.y << "); " << "Radius = " << c.r << "; Area = "  << M_PI * c.r * c.r;
+    return output;
 }

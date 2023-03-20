@@ -18,7 +18,7 @@ Point::Point(float x_cord, float y_cord) {
  * @param the stream it is sent to and the class
  * @retval the stream os
 *******************************************************************/
-ostream& Point::operator<<(ossteam& os, const Point& p) {
-    os << "Point at (" << p.x << "," << p.y << ")" << endl;
-    return os
+ostream &operator<<(ostream& output, const Point& p) {
+    output << "Point at (" << p.x << ", " << p.y << ")";
+    return output;
 }

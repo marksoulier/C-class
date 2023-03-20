@@ -3,14 +3,9 @@
     This class stores a circle class that is inherited from the point class
 *******************************************************************/
 
-#ifndef POINT_H
-#define POINT_H
+#ifndef CIRCLE_H
+#define CIRCLE_H
 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <cmath>
-#include <iomanip>
 #include "point.h"
 using namespace std;
 
@@ -19,7 +14,7 @@ class Circle : public Point {
         float r;
 
     public: 
-        Circle(float radius, float x_cord, float y_cord);
+        Circle(float x_cord, float y_cord, float radius);
         friend ostream& operator<<(ostream &output, const Circle &c);
 };
 
