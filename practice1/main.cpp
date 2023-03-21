@@ -18,7 +18,6 @@ using namespace std;
 int main(void){
     int numerator, denominator;
     char request = '1';
-
     cout << "Hello" << endl;
     Rational rational(numerator, denominator);
     rational.print_number();
