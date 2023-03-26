@@ -13,13 +13,11 @@ Cylinder::Cylinder(float x_cord, float y_cord, float radius, float height) : Cir
 }
 
 /*******************************************************************
- * @name opperator overload of <<
- * @brief prints out this statment to the stream when called apon
- * @param the stream it is sent to and the class
- * @retval the stream os
+ * @name output function
+ * @brief creates a string of the output to the screen
+ * @param none
+ * @retval a string of the correct output
 *******************************************************************/
-ostream &operator<<(ostream &output, const Cylinder &C) {
-    output << "Cylinder with center = (" << C.x << ", " << C.y << "); " << "Radius = " << C.r << "; Height = "  
-    << C.h << "; Volume = " << C.h * M_PI * C.r * C.r;
-    return output;
+string Cylinder::output() {
+    return "Cylinder with base at (" + to_string(x) + ", " + to_string(y) + ") and radius " + to_string(r) + " and height " + to_string(h);
 }
