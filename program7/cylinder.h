@@ -15,7 +15,7 @@ class Cylinder : public Circle {
 
     public: 
         Cylinder(float x_cord, float y_cord, float radius, float height);
-        friend ostream& operator<<(ostream &output, const Cylinder &C);
+        string output();
 };
 
 #endif

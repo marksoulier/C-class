@@ -13,12 +13,11 @@ Point::Point(float x_cord, float y_cord) {
 }
 
 /*******************************************************************
- * @name opperator overload of <<
- * @brief prints out this statment to the stream when called apon
- * @param the stream it is sent to and the class
- * @retval the stream os
+ * @name output function
+ * @brief creates a string of the output to the screen
+ * @param none
+ * @retval a string of the correct output
 *******************************************************************/
-ostream &operator<<(ostream& output, const Point& p) {
-    output << "Point at (" << p.x << ", " << p.y << ")";
-    return output;
+string Point::output(){
+    return "Point at (" + to_string(x) + ", " + to_string(y) + ")";
 }

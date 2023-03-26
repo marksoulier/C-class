@@ -6,21 +6,17 @@
 #ifndef POINT_H
 #define POINT_H
 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <cmath>
-#include <iomanip>
+#include "shape.h"
 using namespace std;
 
-class Point { 
+class Point: public Shape { 
     protected: 
         float x;
         float y;
 
     public: 
         Point(float x_cord, float y_cord);
-        friend ostream& operator<<(ostream &output, const Point &p);
+        string output();
 };
 
 

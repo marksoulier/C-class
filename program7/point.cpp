@@ -7,7 +7,7 @@
  * @param x and y corrdinates of the point
  * @retval returns nothing
 *******************************************************************/
-Point::Point(float x_cord, float y_cord) {
+Point::Point(float x_cord, float y_cord): Shape() {
     x = x_cord;
     y = y_cord;
 }
@@ -17,8 +17,7 @@ Point::Point(float x_cord, float y_cord) {
  * @brief prints out this statment to the stream when called apon
  * @param the stream it is sent to and the class
  * @retval the stream os
-*******************************************************************/
-ostream &operator<<(ostream& output, const Point& p) {
-    output << "Point at (" << p.x << ", " << p.y << ")";
-    return output;
+********************************************************************/
+string Point::output(){
+    return return "Point at (" + to_string(x) + ", " + to_string(y) + ")";
 }

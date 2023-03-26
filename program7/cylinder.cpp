@@ -18,8 +18,6 @@ Cylinder::Cylinder(float x_cord, float y_cord, float radius, float height) : Cir
  * @param the stream it is sent to and the class
  * @retval the stream os
 *******************************************************************/
-ostream &operator<<(ostream &output, const Cylinder &C) {
-    output << "Cylinder with center = (" << C.x << ", " << C.y << "); " << "Radius = " << C.r << "; Height = "  
-    << C.h << "; Volume = " << C.h * M_PI * C.r * C.r;
-    return output;
+string Cylinder::output() {
+    return "Cylinder with base at (" + to_string(x) + ", " + to_string(y) + ") and radius " + to_string(radius) + " and height " + to_string(height);
 }

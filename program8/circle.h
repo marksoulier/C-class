@@ -11,11 +11,13 @@ using namespace std;
 
 class Circle : public Point { 
     protected: 
+        float x;
+        float y;
         float r;
 
     public: 
         Circle(float x_cord, float y_cord, float radius);
-        friend ostream& operator<<(ostream &output, const Circle &c);
+        string output();
 };
 
 #endif

@@ -8,17 +8,21 @@
 #include "point.h"
 #include "circle.h"
 #include "cylinder.h"
+#include "shape.h"
 using namespace std;
 
 int main()
 {
+  Shape *s[3];
   Point p(4,4); // x coordinate, y coordinate
   Circle c(5,5,5); // x, y, radius
   Cylinder y (6, 6, 6, 6); // x, y, r, height
 
-  cout << p << endl << endl;
-  cout << c << " " << endl << (Point) c << endl << endl;
-  cout << y << " " << endl << (Circle) y << " " << endl << (Point) y
-        << endl << endl;
+  s[0] = &p;
+  s[1] = &c;
+  s[2] = &y;
+  cout << *(s[0]) << endl << endl;
+  cout << *(s[1]) << endl << endl;
+  cout << *(s[2]) << endl << endl;
   return 0;
 }
