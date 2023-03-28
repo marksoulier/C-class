@@ -14,24 +14,11 @@
 using namespace std;
 
 class Shape { 
-    protected:  
-        
     public: 
-        Shape() {}
-        virtual string output() const = 0; 
-        friend ostream& operator<<(ostream &output, const Shape*& p);
+        virtual ostream& output(ostream& out) = 0; 
+        friend ostream& operator<<(ostream &output_os, Shape& s){
+            return s.output(output_os);
+        }
 };
 
 #endif
-
-
-/*******************************************************************
- * @name opperator overload of <<
- * @brief prints out this statment to the stream when called apon
- * @param the stream it is sent to and the class
- * @retval the stream os
-*******************************************************************/
-ostream &operator<<(ostream& output, const Shape*& p) {
-    output << p->output();
-    return output;
-};

@@ -17,10 +17,12 @@ Circle::Circle(float x_cord, float y_cord, float radius) : Point(x_cord, y_cord)
 
 /*******************************************************************
  * @name output function
- * @brief creates a string of the output to the screen
- * @param none
- * @retval a string of the correct output
+ * @brief sends a updated output for cout
+ * @param ostream specifically cout
+ * @retval a updated ouput for cout
 *******************************************************************/
-string Circle::output() {
-    return "Circle with center at (" + to_string(x) + ", " + to_string(y) + ") and radius " + to_string(r);
-}
+ostream& Circle::output(ostream& out) {
+    out << "Circle with center at = (" << x <<", " << y << "); and Radius = " << r << ";";
+    out << " Area = " << M_PI*r*r;
+    return out;
+};

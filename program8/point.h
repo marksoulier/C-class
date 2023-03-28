@@ -16,7 +16,7 @@ class Point: public Shape {
 
     public: 
         Point(float x_cord, float y_cord);
-        string output();
+        virtual ostream& output(ostream& out);
 };
 
 

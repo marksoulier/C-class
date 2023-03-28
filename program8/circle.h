@@ -17,7 +17,7 @@ class Circle : public Point {
 
     public: 
         Circle(float x_cord, float y_cord, float radius);
-        string output();
+        virtual ostream& output(ostream& out);
 };
 
 #endif
