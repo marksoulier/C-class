@@ -35,31 +35,43 @@ int main()
   float x_temp;
   float y = 0;
   float iteration = 0;
-  float max_iteration = 0;
+  float max_iteration = 1000;
 
-  unsigned char file_header[14] = [];
-  unsigned char dib_header[40] = [];
-  int num = 1;
+  unsigned char file_header[14] = {'B', 'M', 0x00, 0x00, 0x00, 0x00,0x00, 0x00,
+                                  0x00, 0x00,0x00, 0x00,0x00, 0x00};
+  unsigned char dib_header[40] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+                                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                                0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
   int i;
+  srand(time(nullptr));
+  int num = rand() % 3 + 1;
 
   string image_name = "bitmap_" + to_string(num) + ".bmp";
-  ofstream file(image_name);
-  if (file.is_open()) {
-        
-        for(i = 0; i < 14; i ++){
-          file << file_header[i];
-          cout << 
-        };
+  ofstream file(image_name, ios::binary);
+  if (!file.is_open()) {
+        cout << "file failed to open" << endl;
+        return 1;
+  }
 
-        for(i = 0; i < 40; i ++){
-          file << 
-          cout << 
-        };
-        file << 
-        cout << 
-    }else{
-      cout << "file failed to open" << endl;
-    }
+  //push file header to file
+  for(i = 0; i < 14; i ++){
+    file << file_header[i];
+    cout << file_header[i];
+  }
+
+  //push dib header to file
+  for(i = 0; i < 40; i ++){
+    file << dib_header[i];
+    cout << dib_header[i];
+  }
+
+
+  file << 
+  cout << 
+
+
   while (x*x + y*y <= 2*2 && iteration < max_iteration){
     x_temp = x*x - y*y + x_grid;
     y = 2*x*y + y_grid;
